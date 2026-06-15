@@ -39,8 +39,8 @@ jobs:
       - run:
           name: Trigger Robonito tests
           command: |
-            # Add this value as a CircleCI project environment variable named ROBONITO_API_KEY: rb_42b8fc71945c4b0e94ccc12598e3c08a
-            curl -sS -X POST "https://api.robonito.com/integration/circleci/trigger/f27b610b-06fa-4685-8739-e197649c9e73" \
+            # Add this value as a CircleCI project environment variable named ROBONITO_API_KEY: rb_cb1eac7376ff4c0c9b440cf30e004c67
+            curl -sS -X POST "http://localhost:3000/app-server/integration/circleci/trigger/f27b610b-06fa-4685-8739-e197649c9e73" \
               -H "Content-Type: application/json" \
               -H "x-robonito-api-key: $ROBONITO_API_KEY" \
               -d '{
